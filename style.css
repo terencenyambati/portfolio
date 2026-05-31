@@ -1,0 +1,181 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    margin: 0;
+    padding: 0;
+    color: #e2e8f0;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #1e293b;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+/* HERO */
+h1 {
+    font-size: 42px;
+    color: #38bdf8;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #94a3b8;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    border: 3px solid #38bdf8;
+}
+
+/* BUTTONS */
+button {
+    display: block;
+    margin: 20px auto;
+    background: #38bdf8;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #0ea5e9;
+}
+
+.cv-button {
+    display: inline-block;
+    margin-top: 10px;
+    background: #22c55e;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cv-button:hover {
+    background: #16a34a;
+    transform: scale(1.05);
+}
+
+/* CARDS (FIXED + ANIMATION COMBINED) */
+.card {
+    background: #1e293b;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+
+    /* animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s ease forwards;
+
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* PROJECTS */
+.project {
+    background: #0f172a;
+    padding: 15px;
+    margin-top: 10px;
+    border-left: 3px solid #38bdf8;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    border-left: 4px solid #38bdf8;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .container {
+        padding: 30px 15px;
+    }
+
+    .project {
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
